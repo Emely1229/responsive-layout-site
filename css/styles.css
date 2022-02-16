@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+}
 /**base styles=====================================================**/
 body{
   margin: 0 auto;
@@ -13,7 +14,29 @@ nav {
   font-family: "Roboto", Arial, Verdana;
   font-weight:400;
   letter-spacing:.05em;
+  background-color:#829356;
+  padding:25px;
 }
 a {
   text-decoration: none;
+}
+h1,.top-nav {
+  text-align:center;
+}
+.top-nav, .top-nav li {
+  width:100%;
+}
+h1 a, .top-nav a {
+  color:#000;
+}
+.top-nav {
+  margin-top: 30px;
+}
+.top-nav li{
+  padding:10px 0;
+  margin:5px auto;
+  background-color: #fff;
+}
+.top-nav a {
+  text-transform:uppercase;
 }
