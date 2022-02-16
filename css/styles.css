@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-}
+/**base styles=====================================================**/
 body{
   margin: 0 auto;
   max-width:1024px;
@@ -8,6 +8,11 @@ body{
 ul {
   list-style:none;
   padding-left:0;
+}
+nav {
+  font-family: "Roboto", Arial, Verdana;
+  font-weight:400;
+  letter-spacing:.05em;
 }
 a {
   text-decoration: none;
