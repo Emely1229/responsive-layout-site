@@ -3,12 +3,13 @@
 }
 /**base styles=====================================================**/
 body{
-  margin: 0 auto;
-  max-width:1024px;
+  margin: 0;
+  width:100%
 }
 ul {
   list-style:none;
   padding-left:0;
+  width:100vw;
 }
 nav {
   font-family: "Roboto", Arial, Verdana;
@@ -29,14 +30,119 @@ h1,.top-nav {
 h1 a, .top-nav a {
   color:#000;
 }
+.topbar {
+  background-color:#ffd1dc;
+}
 .top-nav {
   margin-top: 30px;
+  font-weight: bold;
 }
 .top-nav li{
   padding:10px 0;
   margin:5px auto;
-  background-color: #fff;
+  background-color: rgb(209,243,255,.3);
+  border-radius: 5rem;
 }
 .top-nav a {
   text-transform:uppercase;
+}
+.intro {
+  background-color:white;
+}
+.body-text {
+  color: #555B5F;
+  font-family: 'Work Sans', Arial, Verdana;
+}
+.heading-text {
+  font-family:"Roboto", Arial, Verdana;
+  letter-spacing: 1px;
+  margin-bottom: -.3rem;
+  text-align:center;
+  width:100%
+}
+.portfolio {
+  text-align: center;
+}
+.bottomborder {
+  font-family:"Roboto", Arial, Verdana;
+  font-size: 14px;
+  color:#ffd1dc;
+}
+.bottomborder-text {
+  text-shadow: 0 0 .2px pink;
+}
+/* flexbox =================================*/
+.image {
+  align-self: center;
+  flex-grow:1;
+  max-width:300px
+}
+.body-text {
+  text-align:center;
+  font-size:1.1rem;
+  max-width:300px;
+}
+.div {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:2rem;
+  flex-direction: row;
+}
+/*footer flexbox*/
+.footer {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  color: #555B5F;
+  font-family: 'Work Sans', Arial, Verdana;
+  text-align:center;
+}
+.footer ul{
+  text-align:justify;
+  flex-wrap: wrap;
+  padding:4rem;
+}
+.list3 {
+  flex-basis:100%
+}
+.list1 {
+  max-width:300px;
+}
+.footer li {
+  margin:.5rem 0;
+}
+.bottomborder {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+/*media queries=============================*/
+@media (min-width:768px) {
+  .top-nav {
+    margin-top: 0;
+  }
+  .top-nav li {
+    display:inline-block;
+    width:auto;
+    margin-right:15px;
+    background-color:lightpink;
+  }
+  .top-nav li:last-child {
+    margin-right:0;
+  }
+  .top-nav a{
+    color:#fff;
+  }
+}
+@media (min-width:1024px) {
+  nav {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .top-nav,.top-nav li {
+    width:initial;
+    margin-bottom:0;
+  }
 }
