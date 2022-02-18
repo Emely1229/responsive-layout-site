@@ -9,7 +9,6 @@ body{
 ul {
   list-style:none;
   padding-left:0;
-  width:100vw;
 }
 nav {
   font-family: "Roboto", Arial, Verdana;
@@ -53,7 +52,7 @@ h1 a, .top-nav a {
   color: #555B5F;
   font-family: 'Work Sans', Arial, Verdana;
 }
-.heading-text {
+.heading-text,.heading-text-contact {
   font-family:"Roboto", Arial, Verdana;
   letter-spacing: 1px;
   margin-bottom: -.3rem;
@@ -75,19 +74,20 @@ h1 a, .top-nav a {
 .image {
   align-self: center;
   flex-grow:1;
-  max-width:300px
+  max-width:300px;
 }
 .body-text {
   text-align:center;
   font-size:1.1rem;
   max-width:300px;
 }
-.div {
+.div-in,.div {
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
   margin:2rem;
   flex-direction: row;
+  font-family: "Roboto",Arial, Verdana;
 }
 /*footer flexbox*/
 .footer {
@@ -97,8 +97,11 @@ h1 a, .top-nav a {
   color: #555B5F;
   font-family: 'Work Sans', Arial, Verdana;
   text-align:center;
+
 }
 .footer ul{
+  display:flex;
+  flex:1 100%
   text-align:justify;
   flex-wrap: wrap;
   padding:4rem;
@@ -111,14 +114,18 @@ h1 a, .top-nav a {
 }
 .footer li {
   margin:.5rem 0;
+  flex: 0 0 100%;
 }
 .bottomborder {
   display:flex;
   flex-wrap: wrap;
   justify-content:space-around;
 }
+.bottom-nav {
+  display:none;
+}
 /*media queries=============================*/
-@media (min-width:768px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
   .top-nav {
     margin-top: 0;
   }
@@ -126,23 +133,158 @@ h1 a, .top-nav a {
     display:inline-block;
     width:auto;
     margin-right:15px;
-    background-color:lightpink;
+    padding:10px;
   }
   .top-nav li:last-child {
     margin-right:0;
   }
-  .top-nav a{
-    color:#fff;
+  .list1 {
+    max-width:500px;
   }
+  .topbar {
+    padding:10px 0px 0px;
+  }
+
+ #image-intro {
+   order:2;
+  }
+.div-in {
+  display:inline-flex;
+  margin:0px;
+  flex-direction: column;
+  margin: 10px,10px,10px,0px;
+  flex-grow: .1;
+  width:50%;
 }
-@media (min-width:1024px) {
-  nav {
+
+.container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+}
+.body-text {
+  align-self: center;
+}
+ footer {
+  background-color: rgb(300,243,255,.8);
+  padding-top:10px;
+}
+.bottomborder {
+  color:black;
+}
+.bottom-nav {
+  display:flex;
+}
+.bottom-nav h3 {
+  margin-right:30px;
+}
+.bottom-nav::after {
+  display:inline-block;
+}
+.bottomborder-text-none {
+  display:none;
+}
+.topcolor {
+  background-color:#ffd1dc;
+}
+#image {
+  padding-bottom:50px;
+  padding-left:5px;
+  padding-top:0px;
+}
+.top-nav {
+  padding-bottom: 0px;
+}
+}
+@media screen and (min-width:1024px) {
+  .topcolor {
+    background-color:#ffd1dc;
+    flex-wrap:wrap;
+    justify-content:space-around;
+  }
+  .topbar, .top-nav {
     display:flex;
-    justify-content:space-between;
-    align-items: center;
   }
-  .top-nav,.top-nav li {
-    width:initial;
+  .topbar h1 {
+    width:200px;
+    margin-top:10;
+  }
+  .top-nav {
+    margin-top:0;
     margin-bottom:0;
+    justify-content: flex-end;
   }
+  .top-nav li {
+    flex-direction: column;
+    width:150px;
+    justify-content: space-around;
+    width:130px;
+    margin:10px;
+  }
+  #image {
+    padding-bottom:50px;
+    padding-left:5px;
+    padding-top:0px;
+    justify-content: space-around;
+    align-items:flex-start;
+  }
+  #image-intro {
+    order:2;
+   }
+   #body-text-intro {
+
+     margin:0;
+     text-align: justify;
+
+   }
+   .container {
+     display:flex;
+     flex-wrap:wrap;
+     justify-content:space-around;
+     max-width:4704px;
+     padding:20px;
+   }
+   .div-in {
+     display:inline-flex;
+     margin:0px;
+     flex-direction: column;
+     margin: 10px,10px,10px,0px;
+     flex-grow: .1;
+     width:33%;
+     padding:20px;
+   }
+    .body-text {
+     width:100%;
+     max-width: 600px;
+   }
+
+   footer {
+    background-color: rgb(300,243,255,.8);
+    padding-top:10px;
+}
+.bottomborder {
+  color:black;
+  justify-content: space-between;
+}
+.bottom-nav {
+  display:flex;
+}
+.bottom-nav h3 {
+  margin-right:30px;
+}
+.bottom-nav::after {
+  display:inline-block;
+}
+.bottomborder-text {
+  margin-left: 2rem;
+}
+.bottomborder-text-none {
+  display:none;
+}
+.body-text {
+  align-self: center;
+}
+.list1 {
+  max-width:100%;
+}
 }
